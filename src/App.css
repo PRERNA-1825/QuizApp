@@ -17,7 +17,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-height: 400px;
+  min-height: 450px;
   width: 400px;
   background-color: white;
   border-radius: 15px;
@@ -100,7 +100,6 @@ body {
   width: 100px;
   position: absolute;
   bottom: 15px;
-  margin-top: 20px;
 }
 
 #next-button:active {
@@ -133,6 +132,7 @@ body {
   #next-button {
     font-size: medium;
     width: 80px;
+   
   }
   .show-score {
     font-size: 30px;
@@ -156,6 +156,7 @@ body {
   #next-button {
     font-size: small;
     width: 60px;
+   
   }
   .show-score {
     font-size: 20px;
@@ -175,13 +176,15 @@ body {
   .option-btn {
     font-size: large;
     padding: 12px;
+    
   }
   #next-button {
     font-size: large;
     width: 120px;
+ 
   }
   .show-score {
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 
