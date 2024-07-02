@@ -1,15 +1,16 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   display: flex;
   align-items: center;
-  justify-content: center;    
-  /* background-image: linear-gradient(purple,rgb(238, 48, 238)); */
-  /* background-color: #bae4f0; */
+  justify-content: center;
   background-image: url('./backi.jpg');
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
   width: 100%;
 }
@@ -19,30 +20,30 @@ body{
   align-items: center;
   flex-direction: column;
   min-height: 400px;
-  width: 600px;
+  width: 100%;
+  max-width: 900px; /* Increase max-width for larger screens */
   background-color: white;
   border-radius: 15px;
-  /* box-shadow: 2px 2px 10px 1px rgb(102, 3, 102); */
-  box-shadow: 2px 2px 10px 1px #333;  
+  box-shadow: 2px 2px 10px 1px #333;
   overflow: hidden;
   padding: 10px;
   position: relative;
-  
 }
-.heading-txt{
-  color:black;
-  /* color:#276272; */
-  font-size: 30px;
+
+.heading-txt {
+  color: black;
+  font-size: 24px;
   font-weight: bold;
   margin: 20px;
-  text-align: center;  
+  text-align: center;
   text-transform: uppercase;
 }
-.question{
-  margin:8px;
+
+.question {
+  margin: 8px;
   box-shadow: 0px 0px 10px 1px #a2a3a3;
   border-radius: 5px;
-  padding:5px;
+  padding: 5px;
   font-size: large;
   font-weight: 600;
   font-family: 'Times New Roman', Times, serif;
@@ -52,24 +53,24 @@ body{
   justify-content: center;
   align-items: center;
 }
-#question-number{
+
+#question-number {
   margin-right: 5px;
 }
-.option-container{
+
+.option-container {
   display: flex;
   flex-direction: column;
-  margin:6px 4px;    
+  margin: 6px 4px;
   width: 100%;
   padding: 10px;
 }
-/* .option-container input{
-  visibility: hidden;    
-} */
-.option-btn{
+
+.option-btn {
   box-shadow: 0px 0px 4px 1px rgb(128, 123, 123);
   padding: 5px;
   border-radius: 3px;
-  border:none;
+  border: none;
   outline: none;
   transition: 0.3s;
   margin: 5px;
@@ -77,37 +78,154 @@ body{
   background-color: white;
 }
 
-.checked{
+.checked {
   background-color: rgb(10, 70, 80);
-  color:white;
+  color: white;
   box-shadow: 3px 3px 4px 1px rgb(78, 69, 78);
 }
-.option-btn:hover{
+
+.option-btn:hover {
   background-color: rgb(80, 225, 233);
-  color:white;
+  color: white;
 }
-#next-button{
-  padding:10px;
-  border:none;
-  background-color: purple;
+
+#next-button {
+  padding: 10px;
+  border: none;
   background-color: #276272;
-  color:white;
+  color: white;
   border-radius: 5px;
   box-shadow: 3px 3px 2px 1px rgb(127, 109, 109);
   font-size: larger;
   font-weight: bold;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   transition: 0.2s;
-  width:100px;
+  width: 100px;
   position: absolute;
   bottom: 15px;
 }
-#next-button:active{
-  box-shadow:none;    
+
+#next-button:active {
+  box-shadow: none;
 }
-.show-score{
+
+.show-score {
   position: absolute;
-  top:30%;
-  font-size: 40px;
-  text-align: center;  
+  top: 40%;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .heading-txt {
+    font-size: 22px;
+  }
+
+  .question {
+    font-size: medium;
+  }
+
+  .option-btn {
+    font-size: small;
+    padding: 10px;
+  }
+
+  #next-button {
+    font-size: medium;
+    width: 80px;
+  }
+
+  .show-score {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .heading-txt {
+    font-size: 20px;
+  }
+
+  .question {
+    font-size: small;
+  }
+
+  .option-btn {
+    font-size: small;
+    padding: 8px;
+  }
+
+  #next-button {
+    font-size: small;
+    width: 70px;
+  }
+
+  .show-score {
+    font-size: 14px;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .heading-txt {
+    font-size: 28px;
+  }
+
+  .question {
+    font-size: x-large;
+  }
+
+  .option-btn {
+    font-size: large;
+    padding: 12px;
+  }
+
+  #next-button {
+    font-size: large;
+    width: 120px;
+  }
+
+  .show-score {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .heading-txt {
+    font-size: 30px;
+  }
+
+  .question {
+    font-size: xx-large;
+  }
+
+  .option-btn {
+    font-size: larger;
+    padding: 15px;
+  }
+
+  #next-button {
+    font-size: larger;
+    width: 140px;
+  }
+
+  .show-score {
+    font-size: 10px;
+  }
 }
