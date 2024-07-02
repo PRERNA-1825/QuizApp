@@ -10,7 +10,7 @@ export const QuizData = [
       answer: 1
     },
     {
-      question: "What is the largest planet in our solar system?",
+      question: "Which is the largest planet?",
       options: ["Earth", "Mars", "Jupiter", "Saturn"],
       answer: 3
     },
